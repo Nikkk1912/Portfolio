@@ -1,0 +1,34 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: var(--primary-bg);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  height: 100px;
+  width: 100%;
+}
+
+.navbar .nav-sections {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-bg);
+}
+
+.navbar .nav-link {
+  margin: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: var(--weight-semibold);
+}
+
+.navbar #logo img {
+  display: block;
+  width: 80px;
+}

@@ -1,0 +1,21 @@
+@mixin btn-styles($bg-color, $text-color, $hover-bg-color, $text-weight) {
+  display: inline-block;
+  padding: 20px 45px;
+  border: none;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: $text-weight;
+  color: $text-color;
+  background-color: $bg-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
