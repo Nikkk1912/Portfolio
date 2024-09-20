@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--width-large);
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  height: 250px; // Keeping the rectangular height
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 60%; // Limiting text section to 60%
+
+    .project-bio {
+      h3 {
+        margin: 0; // Align to the top left corner
+        font-weight: var(--weight-semibold);
+        font-size: 2rem; // Increase the size of h3
+      }
+
+      p {
+        margin-top: 1rem; // Space between h3 and p
+        color: var(--primary-text);
+        font-size: 1.5rem; // Make p text size same as the original h3 size
+      }
+    }
+
+    .project-link {
+      margin-top: 1rem;
+
+      a {
+        margin-left: 1rem;
+        color: var(--link-color);
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}

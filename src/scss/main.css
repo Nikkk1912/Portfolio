@@ -127,6 +127,23 @@ body {
   transform: rotate(100deg);
 }
 
+.content-text {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.content-text h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.content-text p {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
 .about-me-container {
   display: flex;
   flex-direction: column;
@@ -176,23 +193,6 @@ body {
     transform: translateY(0) rotate(0deg);
   }
 }
-.bio-info {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-.bio-info h2 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-}
-
-.bio-info p {
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  margin: 0 auto;
-  max-width: 700px;
-}
-
 .central-buttons {
   display: flex;
   align-items: center;
@@ -257,6 +257,69 @@ body {
 }
 .central-buttons .btn-central:focus {
   outline: none;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--width-large);
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  height: 250px;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card .project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 60%;
+}
+.card .project-info .project-bio h3 {
+  margin: 0;
+  font-weight: var(--weight-semibold);
+  font-size: 2rem;
+}
+.card .project-info .project-bio p {
+  margin-top: 1rem;
+  color: var(--primary-text);
+  font-size: 1.5rem;
+}
+.card .project-info .project-link {
+  margin-top: 1rem;
+}
+.card .project-info .project-link a {
+  margin-left: 1rem;
+  color: var(--link-color);
+  font-size: 1.5rem;
+}
+.card .card-image {
+  display: flex;
+  align-items: center;
+}
+.card .card-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.project-container .project {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
