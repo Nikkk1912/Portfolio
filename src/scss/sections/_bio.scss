@@ -7,6 +7,7 @@
   justify-content: center;
   margin-top: 8rem;
   padding: 1rem;
+  transition: 0.2s ease-in-out;
 }
 
 .about-me-container > div {
@@ -57,7 +58,6 @@
 .bio-info h2 {
   font-size: 2.5rem;
   line-height: 1.2;
-  transition: 0.2s ease-in-out;
 }
 
 .bio-info p {
