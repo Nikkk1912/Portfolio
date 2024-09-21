@@ -1,0 +1,42 @@
+#footer {
+  background: var(--secondary-bg);
+}
+
+#footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text);
+  min-height: 70px;
+  max-height: 120px;
+  text-align: center;
+}
+
+#footer a {
+  margin-top: 20px;
+  font-size: 1.3rem;
+ font-weight: var(--weight-semibold);
+}
+
+#footer a:hover {
+  opacity: 0.6;
+}
+
+#footer .social-icons-footer {
+  margin: 0.9rem 0;
+}
+
+#footer .social-icons-footer svg {
+  width: 30px;
+  height: auto;
+  color: var(--primary-text);
+}
+
+#footer .social-icons-footer a {
+  margin: 0 0.5rem;
+}
+
+#footer p {
+  font-size: 0.8rem;
+}

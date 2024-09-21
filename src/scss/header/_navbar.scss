@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 20;
-  background-color: var(--primary-bg);
+  background-color: var(--secondary-bg);
 }
 
 .navbar .container {
@@ -19,7 +19,6 @@
 .navbar .nav-sections {
   display: flex;
   align-items: center;
-  background-color: var(--primary-bg);
 }
 
 .navbar .nav-link {

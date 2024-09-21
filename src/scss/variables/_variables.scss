@@ -1,8 +1,15 @@
+/*
+Color scheme:
+Primary bg color: body back ground
+Secondary bg color: header and footer
+
+ */
+
 :root {
   --primary-bg: #ffffff;
-  --secondary-bg: #f4f4f9;
+  --secondary-bg: #ffffff;
 
-  --primary-color: #335C40;
+  --primary-color: #46574b;
   --secondary-color: #274530;
 
   --primary-text: #000000;
@@ -22,9 +29,9 @@
 
 [data-theme="dark"] {
     --primary-bg: #121212;
-    --secondary-bg: #333333;
+    --secondary-bg: #212121;
 
-    --primary-color: #2D4935;
+    --primary-color: #354b39;
     --secondary-color: #1e3023;
 
     --primary-text: #e0e0e0;

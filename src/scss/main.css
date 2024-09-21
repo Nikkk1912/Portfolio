@@ -1,8 +1,14 @@
 @charset "UTF-8";
+/*
+Color scheme:
+Primary bg color: body back ground
+Secondary bg color: header and footer
+
+ */
 :root {
   --primary-bg: #ffffff;
-  --secondary-bg: #f4f4f9;
-  --primary-color: #335C40;
+  --secondary-bg: #ffffff;
+  --primary-color: #46574b;
   --secondary-color: #274530;
   --primary-text: #000000;
   --permanet-color-text: #e0e0e0;
@@ -17,8 +23,8 @@
 
 [data-theme=dark] {
   --primary-bg: #121212;
-  --secondary-bg: #333333;
-  --primary-color: #2D4935;
+  --secondary-bg: #212121;
+  --primary-color: #354b39;
   --secondary-color: #1e3023;
   --primary-text: #e0e0e0;
   --permanet-color-text: #e0e0e0;
@@ -77,7 +83,7 @@ body {
   left: 0;
   right: 0;
   z-index: 20;
-  background-color: var(--primary-bg);
+  background-color: var(--secondary-bg);
 }
 
 .navbar .container {
@@ -92,7 +98,6 @@ body {
 .navbar .nav-sections {
   display: flex;
   align-items: center;
-  background-color: var(--primary-bg);
 }
 
 .navbar .nav-link {
@@ -120,14 +125,6 @@ body {
 .theme-icons > img {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   width: 30px;
-}
-
-#switch:checked + .toggle-icons .dark-theme-icon {
-  transform: rotate(250deg);
-}
-
-#switch:checked + .toggle-icons .light-theme-icon {
-  transform: rotate(100deg);
 }
 
 .content-text {
@@ -364,6 +361,49 @@ body {
 .project-container .card-link {
   display: block;
   text-decoration: none;
+}
+
+#footer {
+  background: var(--secondary-bg);
+}
+
+#footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text);
+  min-height: 70px;
+  max-height: 120px;
+  text-align: center;
+}
+
+#footer a {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: var(--weight-semibold);
+}
+
+#footer a:hover {
+  opacity: 0.6;
+}
+
+#footer .social-icons-footer {
+  margin: 0.9rem 0;
+}
+
+#footer .social-icons-footer svg {
+  width: 30px;
+  height: auto;
+  color: var(--primary-text);
+}
+
+#footer .social-icons-footer a {
+  margin: 0 0.5rem;
+}
+
+#footer p {
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=main.css.map */
