@@ -1,0 +1,50 @@
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+  padding: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.about-me-container > div {
+  margin-top: 1rem;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+#greeting {
+  font-size: 4rem;
+}
+
+.profile-pic {
+  width: 300px;
+  border-radius: 50%;
+  animation: rotate-bounce 4s infinite ease-in-out;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes rotate-bounce {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(-25deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-20px) rotate(25deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
