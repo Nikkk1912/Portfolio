@@ -1,5 +1,3 @@
-@import "../mixins/_btn-mixin";
-
 .about-me-container {
   display: flex;
   flex-direction: column;
@@ -50,23 +48,3 @@
   }
 }
 
-.central-buttons {
-  display: flex;
-  align-items: center;
-  background-color: var(--primary-bg);
-}
-
-.central-buttons .btn-github {
-  @include btn-styles(#424b53, var(--secondary-text),  #24292d, var(--weight-semibold));
-  margin: 20px;
-}
-
-.central-buttons .btn-linkedin {
-  @include btn-styles(#0077b7, var(--primary-text), #005583, var(--weight-semibold));
-  margin: 20px;
-}
-
-.central-buttons .btn-central {
-  @include btn-styles(var(--primary-color), var(--primary-text), var(--secondary-color), var(--weight-semibold));
-  margin: 20px;
-}

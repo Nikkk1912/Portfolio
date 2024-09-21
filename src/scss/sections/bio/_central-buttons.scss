@@ -1,0 +1,38 @@
+@import "../../mixins/btn-mixin";
+
+.central-buttons {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-bg);
+}
+
+.central-buttons .btn-github {
+  @include btn-styles(#424b53, var(--permanet-color-text),  #24292d, var(--weight-semibold));
+  margin: 20px;
+}
+
+.central-buttons .btn-linkedin {
+  @include btn-styles(#0077b7, var(--permanet-color-text), #005583, var(--weight-semibold));
+  margin: 20px;
+}
+
+.central-buttons .btn-central {
+  @include btn-styles(var(--primary-color), var(--permanet-color-text), var(--secondary-color), var(--weight-semibold));
+  margin: 20px;
+}
+
+.central-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.social-network-logo{
+  margin-right: 20px;
+
+  img {
+    width: 30px;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+  }
+}
