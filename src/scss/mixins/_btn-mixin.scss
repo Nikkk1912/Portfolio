@@ -1,5 +1,5 @@
 @mixin btn-styles($bg-color, $text-color, $hover-bg-color, $text-weight) {
-  display: inline-block;
+  display: flex;
   padding: 20px 45px;
   border: none;
   border-radius: 25px;

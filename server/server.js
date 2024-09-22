@@ -13,6 +13,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/html/output/index_main.html'));
 });
 
+// Get endpoint for index_main.html
+app.get('/index_main.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/html/output/index_main.html'));
+});
+
 // Get endpoint for index_socials.html
 app.get('/index_socials.html', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/html/output/index_socials.html'));

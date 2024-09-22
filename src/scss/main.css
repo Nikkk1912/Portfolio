@@ -68,6 +68,8 @@ body {
   max-width: var(--width-medium);
   margin: 0 auto;
   padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .division {
@@ -89,6 +91,8 @@ body {
   right: 0;
   z-index: 20;
   background-color: var(--secondary-bg);
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar .container {
@@ -135,6 +139,61 @@ body {
 .theme-icons > img {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   width: 30px;
+}
+
+.socials-navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.back-to-main-button-container {
+  display: flex;
+  padding: 20px 45px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.7rem;
+  font-weight: var(--weight-semibold);
+  color: var(--permanet-color-text);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 20px;
+  max-height: 3.3rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 10rem;
+  position: relative;
+}
+.back-to-main-button-container:hover {
+  background-color: var(--secondary-color);
+}
+.back-to-main-button-container:focus {
+  outline: none;
+}
+
+.btn-back-to-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.btn-back-to-main .button-icon {
+  margin: 0.5rem;
+}
+
+.socials-navbar-container h1 {
+  white-space: nowrap;
+  margin: 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.socials-navbar-container .theme-switch {
+  margin-left: 20px;
 }
 
 .content-text {
@@ -210,7 +269,7 @@ body {
 }
 
 .central-buttons .btn-github {
-  display: inline-block;
+  display: flex;
   padding: 20px 45px;
   border: none;
   border-radius: 25px;
@@ -230,7 +289,7 @@ body {
 }
 
 .central-buttons .btn-linkedin {
-  display: inline-block;
+  display: flex;
   padding: 20px 45px;
   border: none;
   border-radius: 25px;
@@ -250,7 +309,7 @@ body {
 }
 
 .central-buttons .btn-central {
-  display: inline-block;
+  display: flex;
   padding: 20px 45px;
   border: none;
   border-radius: 25px;
@@ -274,10 +333,10 @@ body {
   align-items: center;
 }
 
-.social-network-logo {
+.button-icon {
   margin-right: 20px;
 }
-.social-network-logo img {
+.button-icon img {
   width: 30px;
   height: auto;
   display: block;
