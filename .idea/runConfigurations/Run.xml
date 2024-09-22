@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run" type="NodeJSConfigurationType" working-dir="$PROJECT_DIR$">
+    <EXTENSION ID="com.intellij.lang.javascript.buildTools.npm.rc.StartBrowserRunConfigurationExtension">
+      <browser name="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+    </EXTENSION>
+    <method v="2">
+      <option name="FwBeforeLaunchTask" enabled="true" />
+      <option name="NpmBeforeRunTask" enabled="true">
+        <package-json value="$PROJECT_DIR$/package.json" />
+        <command value="run" />
+        <scripts>
+          <script value="dev" />
+        </scripts>
+        <node-interpreter value="project" />
+        <envs />
+      </option>
+    </method>
+  </configuration>
+</component>

@@ -43,6 +43,13 @@
         color: var(--permanet-color-text);
         font-size: var(--card-info-font-size);
       }
+
+      ul {
+        color: var(--permanet-color-text);
+        font-size: var(--card-info-font-size);
+        list-style-type: circle;
+        margin-left: 50px;
+      }
     }
 
     .project-link {

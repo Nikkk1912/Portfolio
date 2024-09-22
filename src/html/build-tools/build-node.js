@@ -45,7 +45,6 @@ fs.readdir(partsDirectory, (err, folders) => {
 
                         // Process each file
                         files.forEach(file => {
-                            // Create the placeholder name
                             const placeholder = `{{ ${folder}_${file} }}`; // Updated placeholder format
                             const filePath = path.join(folderPath, file);
 
