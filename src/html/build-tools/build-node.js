@@ -1,43 +1,77 @@
 const fs = require('fs');
 const path = require('path');
 
-const mainHtmlPath = path.join(__dirname, '../templates/main.html');
+// Paths to directories
+const partsDirectory = path.join(__dirname, '../parts');
+const templatesDirectory = path.join(__dirname, '../templates');
+const outputDir = path.join(__dirname, '../output');
 
-// Parts for main page
-const mainHeaderPath = path.join(__dirname, '../parts/main/main_header.html');
-const mainAboutMePath = path.join(__dirname, '../parts/main/main_section_about_me.html');
-const mainProjectsPath = path.join(__dirname, '../parts/main/main_section_projects.html');
-const mainFooterPath = path.join(__dirname, '../parts/main/main_footer.html');
+// Ensure output directory exists
+if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+}
 
-fs.readFile(mainHtmlPath, 'utf8', (err, compiledHtml) => {
+// Read the parts directory and get all subfolders
+fs.readdir(partsDirectory, (err, folders) => {
     if (err) {
-        return console.error("Failed to read main.html:", err);
+        return console.error('Unable to scan directory: ' + err);
     }
 
-    const readParts = [
-        { path: mainHeaderPath, placeholder: '{{ main_header.html }}' },
-        { path: mainAboutMePath, placeholder: '{{ main_section_about_me.html }}' },
-        { path: mainProjectsPath, placeholder: '{{ main_section_projects.html }}' },
-        { path: mainFooterPath, placeholder: '{{ main_footer.html }}' }
-    ];
+    // Iterate over each subfolder
+    folders.forEach(folder => {
+        const folderPath = path.join(partsDirectory, folder);
 
-    let readCount = 0;
-
-    readParts.forEach(part => {
-        fs.readFile(part.path, 'utf8', (err, content) => {
+        // Check if the current folder is indeed a directory
+        fs.stat(folderPath, (err, stats) => {
             if (err) {
-                return console.error(`Failed to read ${part.placeholder}:`, err);
+                return console.error('Error accessing ' + folder + ': ' + err);
             }
 
-            compiledHtml = compiledHtml.replace(part.placeholder, content);
-            readCount++;
-
-            if (readCount === readParts.length) {
-                fs.writeFile(path.join(__dirname, '../output/main_index.html'), compiledHtml, err => {
+            if (stats.isDirectory()) {
+                // Read the files inside each subfolder
+                fs.readdir(folderPath, (err, files) => {
                     if (err) {
-                        return console.error("Failed to write main_index.html:", err);
+                        return console.error('Unable to scan subfolder ' + folder + ': ' + err);
                     }
-                    console.log("Successfully compiled main_index.html!");
+
+                    // Initialize compiled HTML with the main template
+                    const templatePath = path.join(templatesDirectory, `${folder}.html`);
+                    fs.readFile(templatePath, 'utf8', (err, compiledHtml) => {
+                        if (err) {
+                            return console.error(`Failed to read ${templatePath}:`, err);
+                        }
+
+                        let readCount = 0;
+
+                        // Process each file
+                        files.forEach(file => {
+                            // Create the placeholder name
+                            const placeholder = `{{ ${folder}_${file} }}`; // Updated placeholder format
+                            const filePath = path.join(folderPath, file);
+
+                            // Read the content of the file to replace the placeholder
+                            fs.readFile(filePath, 'utf8', (err, content) => {
+                                if (err) {
+                                    return console.error(`Failed to read ${filePath}:`, err);
+                                }
+
+                                // Replace placeholder with the content of the file
+                                compiledHtml = compiledHtml.replace(placeholder, content);
+                                readCount++;
+
+                                // Once all files are read, write the compiled HTML
+                                if (readCount === files.length) {
+                                    const outputFileName = `index_${folder}.html`;
+                                    fs.writeFile(path.join(outputDir, outputFileName), compiledHtml, err => {
+                                        if (err) {
+                                            return console.error(`Failed to write ${outputFileName}:`, err);
+                                        }
+                                        console.log(`Successfully compiled ${outputFileName}!`);
+                                    });
+                                }
+                            });
+                        });
+                    });
                 });
             }
         });

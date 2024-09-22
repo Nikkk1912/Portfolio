@@ -16,9 +16,15 @@ Secondary bg color: header and footer
   --weight-small: 400;
   --weight-semibold: 600;
   --weight-bold: 800;
-  --width-small: 600px;
-  --width-medium: 1100px;
-  --width-large: 1300px;
+  --width-small: 5rem;
+  --width-medium: 8rem;
+  --width-large: 70rem;
+  --card-title-font-size: 1.8rem;
+  --card-info-font-size: 1.2rem;
+  --card-img-width: 20rem;
+  --card-lang-icon-size: 2rem;
+  --navbar-height: 7rem;
+  --divisor-height: 5rem;
 }
 
 [data-theme=dark] {
@@ -66,9 +72,8 @@ body {
 
 .division {
   width: 100%;
-  height: 1px;
+  height: var(--divisor-height);
   background-color: var(--card-background);
-  margin: 5.5rem 0;
 }
 
 #top-menu {
@@ -89,9 +94,9 @@ body {
 .navbar .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   z-index: 20;
-  height: 100px;
+  height: var(--navbar-height);
   width: 100%;
 }
 
@@ -120,6 +125,11 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+
+.theme-icons {
+  display: flex;
+  align-items: center;
 }
 
 .theme-icons > img {
@@ -204,7 +214,7 @@ body {
   padding: 20px 45px;
   border: none;
   border-radius: 25px;
-  font-size: 20px;
+  font-size: 1.7rem;
   font-weight: var(--weight-semibold);
   color: var(--permanet-color-text);
   background-color: #424b53;
@@ -224,7 +234,7 @@ body {
   padding: 20px 45px;
   border: none;
   border-radius: 25px;
-  font-size: 20px;
+  font-size: 1.7rem;
   font-weight: var(--weight-semibold);
   color: var(--permanet-color-text);
   background-color: #0077b7;
@@ -244,7 +254,7 @@ body {
   padding: 20px 45px;
   border: none;
   border-radius: 25px;
-  font-size: 20px;
+  font-size: 1.7rem;
   font-weight: var(--weight-semibold);
   color: var(--permanet-color-text);
   background-color: var(--primary-color);
@@ -280,13 +290,13 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: var(--width-large);
-  min-width: var(--width-large);
+  min-width: var(--width-medium);
   background-color: var(--primary-color);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   transition: transform 0.3s ease;
-  height: 250px;
+  height: 100%;
 }
 .card:hover {
   transform: translateY(-5px);
@@ -306,13 +316,13 @@ body {
   margin-top: -10px;
   font-weight: var(--weight-semibold);
   color: var(--permanet-color-text);
-  font-size: 2rem;
+  font-size: var(--card-title-font-size);
 }
 .card .project-info .project-bio p {
   margin-left: 32px;
   margin-top: 8px;
   color: var(--permanet-color-text);
-  font-size: 1.3rem;
+  font-size: var(--card-info-font-size);
 }
 .card .project-info .project-link {
   margin-top: 1rem;
@@ -327,7 +337,7 @@ body {
   align-items: center;
 }
 .card .card-image img {
-  width: 300px;
+  width: var(--card-img-width);
   height: auto;
   border-radius: 8px;
 }
@@ -339,15 +349,16 @@ body {
 .card .language-icon img {
   position: relative;
   z-index: 1;
-  width: 30px;
-  height: 30px;
+  width: var(--card-lang-icon-size);
+  height: var(--card-lang-icon-size);
   border-radius: 5px;
 }
 
 .project-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  gap: 2rem;
   justify-content: center;
   padding: 2rem;
 }
@@ -390,6 +401,9 @@ body {
 
 #footer .social-icons-footer {
   margin: 0.9rem 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 #footer .social-icons-footer svg {

@@ -10,9 +10,9 @@
 .navbar .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   z-index: 20;
-  height: 100px;
+  height: var(--navbar-height);
   width: 100%;
 }
 

@@ -9,15 +9,11 @@
   cursor: pointer;
 }
 
+.theme-icons {
+  display: flex;
+  align-items: center;
+}
 .theme-icons > img {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   width: 30px;
 }
-
-//#switch:checked + .toggle-icons .dark-theme-icon {
-//  transform: rotate(250deg);
-//}
-//
-//#switch:checked + .toggle-icons .light-theme-icon {
-//  transform: rotate(100deg);
-//}

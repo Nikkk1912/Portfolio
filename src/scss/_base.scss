@@ -33,7 +33,6 @@ body {
 
 .division {
   width: 100%;
-  height: 1px;
+  height: var(--divisor-height);
   background-color: var(--card-background);
-  margin: 5.5rem 0;
 }

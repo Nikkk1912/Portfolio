@@ -21,10 +21,18 @@ Secondary bg color: header and footer
   --weight-semibold: 600;
   --weight-bold: 800;
 
-  --width-small: 600px;
-  --width-medium: 1100px;
-  --width-large: 1300px;
+  --width-small: 5rem;
+  --width-medium: 8rem;
+  --width-large: 70rem;
 
+  --card-title-font-size: 1.8rem;
+  --card-info-font-size: 1.2rem;
+  --card-img-width: 20rem;
+  --card-lang-icon-size: 2rem;
+
+  --navbar-height: 7rem;
+
+  --divisor-height: 5rem;
 }
 
 [data-theme="dark"] {
