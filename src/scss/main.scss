@@ -6,12 +6,14 @@
 @import "header/_header";
 @import "header/_navbar";
 @import "header/_switch";
-@import "header/_socials-container";
+@import "header/socials-navbar-container";
 
 @import "sections/_sections";
 @import "sections/bio/_bio";
 @import "sections/bio/_central-buttons";
 @import "sections/projects/_cards";
 @import "sections/projects/_projects";
+
+@import "sections/social-links/_social-links";
 
 @import "footer/_footer";

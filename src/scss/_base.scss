@@ -25,6 +25,11 @@ body {
   line-height: 1.5;
 }
 
+html body {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   padding: 1rem 2rem;
   justify-content: center;
