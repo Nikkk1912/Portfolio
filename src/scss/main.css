@@ -65,11 +65,10 @@ body {
 }
 
 .container {
-  max-width: var(--width-medium);
-  margin: 0 auto;
   padding: 1rem 2rem;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .division {
@@ -82,6 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: center;
 }
 
 .navbar {
@@ -145,7 +145,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   position: relative;
 }
 
