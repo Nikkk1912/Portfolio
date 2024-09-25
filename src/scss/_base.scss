@@ -28,9 +28,11 @@ body {
 html body {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .container {
+  flex: 1;
   padding: 1rem 2rem;
   justify-content: center;
   align-items: center;
@@ -41,4 +43,10 @@ html body {
   width: 100%;
   height: var(--divisor-height);
   background-color: var(--card-background);
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

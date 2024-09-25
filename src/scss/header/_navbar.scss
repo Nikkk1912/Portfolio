@@ -1,5 +1,3 @@
-@import "../mixins/btn-mixin";
-
 .navbar {
   position: fixed;
   top: 0;
@@ -25,7 +23,7 @@
   align-items: center;
 }
 
-.navbar .nav-link {
+.nav-sections a {
   margin: 0.8rem;
   font-size: 1.5rem;
   font-weight: var(--weight-semibold);
