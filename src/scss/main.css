@@ -27,7 +27,7 @@ Secondary bg color: header and footer
   --divisor-height: 5rem;
   --github-color: #2B3137;
   --linkedin-color: #0077B5;
-  --email-color: #4F0806;
+  --email-color: #ffffff;
 }
 
 [data-theme=dark] {
@@ -464,6 +464,7 @@ html body {
 
 .social-card {
   min-height: 21rem;
+  justify-content: center;
 }
 
 .social-card.a {
@@ -483,13 +484,9 @@ html body {
 }
 
 .social-bio {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
-  top: 120px;
-  left: -110px;
-  width: 100px;
+  position: absolute;
+  bottom: -10rem;
+  left: -11rem;
 }
 
 .social-card {
@@ -505,6 +502,15 @@ html body {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.social-card img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #social-card-linkedin {
