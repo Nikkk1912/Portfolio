@@ -25,9 +25,12 @@
 .profile-pic {
   width: 300px;
   border-radius: 50%;
-  animation: rotate-bounce 4s infinite ease-in-out;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.profile-pic:hover {
+  animation: rotate-bounce 4s infinite ease-in-out;
 }
 
 @keyframes rotate-bounce {
