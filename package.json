@@ -4,8 +4,9 @@
   "main": "src/js/main_index.js",
   "scripts": {
     "build": "node src/html/build-tools/build-node.js",
+    "inject-links": "node src/html/build-tools/link-processor.js",
     "start": "node server/server.js",
-    "dev": "npm run build && npm run start"
+    "dev": "npm run build && npm run inject-links && npm run start"
   },
   "private": true,
   "keywords": [],

@@ -1,0 +1,33 @@
+{
+  "socials": [
+    {
+      "name": "gmail",
+      "link": "---"
+    },
+    {
+      "name": "github",
+      "link": "https://github.com/Nikkk1912"
+    },
+    {
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/in/mykola-moskalevskyi-7912832b3"
+    },
+
+    {
+      "name": "javashop",
+      "link": "https://github.com/Nikkk1912/Java-Shop-App"
+    },
+    {
+      "name": "pingpong",
+      "link": "https://github.com/Nikkk1912/Ping-Pong-Game"
+    },
+    {
+      "name": "radixcalc",
+      "link": "https://github.com/Nikkk1912/Conventer-to-any-radix-from-decimal"
+    },
+    {
+      "name": "weathebot",
+      "link": "https://github.com/Nikkk1912/Simple-Discord-Weather-Bot"
+    }
+  ]
+}
