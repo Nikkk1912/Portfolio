@@ -190,6 +190,10 @@ html body {
   outline: none;
 }
 
+.back-to-main-button-container a {
+  color: var(--permanet-color-text);
+}
+
 .btn-back-to-main {
   display: flex;
   align-items: center;
