@@ -17,7 +17,7 @@ Secondary bg color: header and footer
   --weight-semibold: 600;
   --weight-bold: 800;
   --width-small: 5rem;
-  --width-medium: 8rem;
+  --width-medium: 24rem;
   --width-large: 67rem;
   --card-title-font-size: 1.8rem;
   --card-info-font-size: 1.2rem;
@@ -28,6 +28,7 @@ Secondary bg color: header and footer
   --github-color: #2B3137;
   --linkedin-color: #0077B5;
   --email-color: #b4b4b4;
+  --input-font-size: 2rem;
 }
 
 [data-theme=dark] {
@@ -464,8 +465,7 @@ html body {
 
 #socials-link-cards {
   flex-grow: 1;
-  padding-top: 18rem;
-  padding-bottom: 25rem;
+  padding-top: 4rem;
 }
 
 .social-cards {
@@ -537,6 +537,84 @@ html body {
 
 .social-card:hover .social-bio {
   opacity: 1;
+}
+
+#input-form {
+  flex-grow: 1;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.input-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+#email-form label {
+  font-weight: var(--weight-semibold);
+  position: relative;
+  margin-top: 2rem;
+}
+
+#email-form input {
+  width: 100%;
+  max-width: var(--width-medium);
+  outline: none;
+  background-color: var(--primary-bg);
+  border: none;
+  border-bottom: 4px solid var(--primary-text);
+  color: var(--primary-text);
+  margin-top: 1.5rem;
+  font-size: var(--input-font-size);
+  text-align: center;
+}
+
+#email-form input:focus {
+  border: none;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+#email-form input::selection {
+  background-color: var(--primary-color);
+  color: var(--permanet-color-text);
+}
+
+#email-form button {
+  display: flex;
+  padding: 20px 45px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.7rem;
+  font-weight: var(--weight-semibold);
+  color: var(--permanent-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+  color: var(--permanet-color-text);
+}
+#email-form button:hover {
+  background-color: var(--secondary-color);
+}
+#email-form button:focus {
+  outline: none;
+}
+
+#form-message {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  color: var(--primary-text);
+  font-weight: var(--font-weight-semibold);
 }
 
 #footer {

@@ -4,16 +4,20 @@
         <h2>Leave your email</h2>
     </div>
 
-    <div class="input-form-container">
-        <form id="email-form" action="/submit" method="POST">
-            <label class="form-label" for="name">Name:</label>
+        <form id="email-form" method="POST">
+            <label class="form-label" for="name">
+                <h2>Name</h2>
+            </label>
             <input class="form-input" type="text" id="name" name="name" required>
 
-            <label class="form-label" for="email">Email:</label>
+            <label class="form-label" for="email">
+                <h2>Email</h2>
+            </label>
             <input class="form-input" type="email" id="email" name="email" required>
 
-            <button class="form-btn" type="submit">Submit</button>
+            <button type="submit">Submit</button>
         </form>
-    </div>
+
+    <div id="form-message"></div>
 
 </section>
