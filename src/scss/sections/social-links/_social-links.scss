@@ -1,7 +1,9 @@
+@import "../../variables/_variables.scss";
+
 #socials-link-cards {
   flex-grow: 1;
-  padding-top: 18rem;
-  padding-bottom: 25rem;
+  padding-top: 4rem;
+  //padding-bottom: 25rem;
 }
 
 .social-cards {
@@ -12,6 +14,11 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .social-bio {
@@ -36,6 +43,10 @@
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: auto;
+  }
 }
 
 .social-card.a{

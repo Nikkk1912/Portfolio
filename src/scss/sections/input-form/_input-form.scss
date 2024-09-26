@@ -1,0 +1,57 @@
+@import "../../mixins/btn-mixin";
+
+#input-form{
+  flex-grow: 1;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.input-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+#email-form label {
+  font-weight: var(--weight-semibold);
+  position: relative;
+  margin-top: 2rem;
+}
+
+#email-form input {
+  width: 100%;
+  max-width: var(--width-medium);
+  outline: none;
+  background-color: var(--primary-bg);
+  border: none;
+  border-bottom: 4px solid var(--primary-text);
+  color: var(--primary-text);
+  margin-top: 1.5rem;
+  font-size: var(--input-font-size);
+  text-align: center;
+}
+
+#email-form input:focus {
+  border:none;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+#email-form input::selection {
+  background-color: var(--primary-color);
+  color: var(--permanet-color-text);
+}
+
+#email-form button {
+  @include btn-styles(var(--primary-color), var(--permanent-color), var(--secondary-color), var(--weight-semibold));
+  margin-top: 2rem;
+  color: var(--permanet-color-text);
+}

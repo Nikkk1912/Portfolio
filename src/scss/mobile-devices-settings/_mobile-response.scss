@@ -1,0 +1,69 @@
+@import "../variables/_variables.scss";
+
+@media (max-width: $breakpoint-tablet) {
+  body {
+    font-size: 80%;
+  }
+
+  .card {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .card .project-info {
+    max-width: 100%;
+  }
+
+  .card .card-image img {
+    width: 100%;
+  }
+
+  .social-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .back-to-main-button-container,
+  .central-buttons .btn-central,
+  .central-buttons .btn-linkedin,
+  .central-buttons .btn-github {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
+  #footer .container {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  #about-me .division {
+    margin-top: 7rem;
+  }
+
+  .central-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .content-text h2 {
+    font-size: 2rem;
+  }
+
+  .content-text p {
+    font-size: 1.2rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+  }
+
+  .social-card img {
+    width: 60px;
+  }
+
+  .back-to-main-button-container {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
