@@ -1,6 +1,8 @@
 @import "variables/_variables";
 @import "mixins/_btn-mixin";
 
+@import "mobile-devices-settings/_mobile-response";
+
 @import "_base";
 
 @import "header/_header";

@@ -5,6 +5,9 @@ Secondary bg color: header and footer
 
  */
 
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
 :root {
   --primary-bg: #ffffff;
   --secondary-bg: #ffffff;

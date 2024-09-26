@@ -1,3 +1,5 @@
+@import "../variables/_variables.scss";
+
 .navbar {
   position: fixed;
   top: 0;
@@ -7,6 +9,18 @@
   background-color: var(--secondary-bg);
   justify-content: center;
   align-items: center;
+
+  @media (max-width: $breakpoint-tablet) {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .navbar .container {
@@ -16,20 +30,64 @@
   z-index: 20;
   height: var(--navbar-height);
   width: 100%;
+
+  @media (max-width: $breakpoint-tablet) {
+    height: var(--navbar-height);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: auto;
+    flex-direction: column;
+  }
+
 }
 
 .navbar .nav-sections {
   display: flex;
   align-items: center;
+
+  @media (max-width: $breakpoint-tablet) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+}
+
+.nav-sections li {
+  @media (max-width: $breakpoint-tablet) {
+    margin: 0.5rem;
+  }
 }
 
 .nav-sections a {
   margin: 0.8rem;
   font-size: 1.5rem;
   font-weight: var(--weight-semibold);
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1.3rem;
+    margin: 0.5rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1.2rem;
+    margin: 0.3rem;
+  }
 }
 
 .navbar #logo img {
   display: block;
   width: 80px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 60px;
+    border-radius: 5px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 50px;
+  }
 }
