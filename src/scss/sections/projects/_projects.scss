@@ -17,6 +17,8 @@
   .card-link {
     display: block;
     text-decoration: none;
+    max-width: var(--width-large);
+    width: 100%;
   }
 
 }
