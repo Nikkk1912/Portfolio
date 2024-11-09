@@ -26,6 +26,11 @@ app.get('/index_socials.html', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/html/output/index_socials.html'));
 });
 
+// Get endpoint for index_games.html
+app.get('/index_games.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/html/output/index_games.html'));
+});
+
 // Post endpoint to save email from input form
 app.post('/submit-email', emailHandler.handleEmailSubmission)
 
