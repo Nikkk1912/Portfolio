@@ -12,6 +12,11 @@ let ballY = canvas.height / 2;
 let ballSpeedX = 2;
 let ballSpeedY = 2;
 
+let isCatShowing = false; // To track if the cat is showing
+
+const catGif = document.getElementById('catGif');
+const catButton = document.getElementById('catButton');
+
 function drawPaddle() {
     context.fillStyle = 'white';
     context.fillRect(10, paddleY, paddleWidth, paddleHeight);
@@ -45,6 +50,10 @@ function updateBall() {
     if (ballX + ballRadius > wallX) {
         ballSpeedX = -ballSpeedX;
     }
+
+    if (isCatShowing) {
+        return;
+    }
 }
 
 function movePaddleUp() {
@@ -64,6 +73,18 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
+
+catButton.addEventListener('click', () => {
+
+    isCatShowing = true;
+    catGif.style.display = 'block';
+
+    setTimeout(() => {
+        isCatShowing = false;
+        catGif.style.display = 'none';
+    }, 3000);
+});
+
 document.getElementById('moveUp').addEventListener('click', movePaddleUp);
 document.getElementById('moveDown').addEventListener('click', movePaddleDown);
 
@@ -75,4 +96,6 @@ function restartGame() {
     ballY = canvas.height / 2;
     ballSpeedX = 2;
     ballSpeedY = 2;
+    isCatShowing = false;
+    catGif.style.display = 'none'; // Ensure cat GIF is hidden when restarting
 }

@@ -11,9 +11,7 @@
 <div class="container text-center">
     <h1 class="display-4 my-4">Pong Game</h1>
     <div class="row justify-content-center mb-3">
-
         <a class="btn btn-light col-2 mx-2" href="games.html">Back to Games</a>
-
         <p class="col-6">Use the buttons below to move the paddle up and down.</p>
     </div>
 
@@ -26,9 +24,22 @@
         <button id="moveDown" class="btn btn-danger col-3 mx-2">Move Down</button>
     </div>
 
+    <div class="row justify-content-center my-3">
+        <button id="catButton" class="btn btn-warning col-2">Show Cat</button>
+    </div>
+
     <div class="row justify-content-center">
         <button class="btn btn-warning col-2" onclick="restartGame()">Restart Game</button>
     </div>
+
+</div>
+
+<div id="catGif" style="display: none; position: relative; width: 200px; height: 200px; top: 50%; left: 60%; transform: translate(-50%, -50%);">
+    <div class="tenor-gif-embed" data-postid="1552373851222379449" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+        <a href="https://tenor.com/view/rupert-cat-cats-3d-spin-gif-1552373851222379449">Rupert Cat Sticker</a> from
+        <a href="https://tenor.com/search/rupert-stickers">Rupert Stickers</a>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </div>
 
 <script src="../../js/pong.js"></script>
