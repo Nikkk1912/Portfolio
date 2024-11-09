@@ -1,7 +1,7 @@
 {
   "name": "portfolio-simple",
   "version": "1.0.0",
-  "main": "src/js/main_index.js",
+  "main": "src/js/index.js",
   "scripts": {
     "build": "node src/html/build-tools/builder.js",
     "start": "node server/server.js",

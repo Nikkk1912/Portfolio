@@ -11,24 +11,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/assets', express.static(path.join(__dirname, '../assets')));
 app.use('/', express.static(path.join(__dirname, '../src')));
 
-// Get endpoint for index_main.html
+// Get endpoint for index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/html/output/index_main.html'));
+    res.sendFile(path.join(__dirname, '../src/html/output/index.html'));
 });
 
-// Get endpoint for index_main.html
-app.get('/index_main.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/html/output/index_main.html'));
+// Get endpoint for index.html
+app.get('/index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/html/output/index.html'));
 });
 
-// Get endpoint for index_socials.html
-app.get('/index_socials.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/html/output/index_socials.html'));
+// Get endpoint for socials.html
+app.get('/socials.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/html/output/socials.html'));
 });
 
-// Get endpoint for index_games.html
-app.get('/index_games.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/html/output/index_games.html'));
+// Get endpoint for games.html
+app.get('/games.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/html/output/games.html'));
+});
+
+// Get endpoint for pong.html
+app.get('/pong.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/html/output/pong.html'));
 });
 
 // Post endpoint to save email from input form

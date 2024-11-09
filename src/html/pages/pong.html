@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../scss/main.css">
+</head>
+<body class="bg-dark text-white">
+<div class="container text-center">
+    <h1 class="display-4 my-4">Pong Game</h1>
+    <div class="row justify-content-center mb-3">
+
+        <a class="btn btn-light col-2 mx-2" href="games.html">Back to Games</a>
+
+        <p class="col-6">Use the buttons below to move the paddle up and down.</p>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <canvas id="pongCanvas" class="border border-light rounded bg-secondary" width="400" height="300"></canvas>
+    </div>
+
+    <div class="row justify-content-center my-3">
+        <button id="moveUp" class="btn btn-success col-3 mx-2">Move Up</button>
+        <button id="moveDown" class="btn btn-danger col-3 mx-2">Move Down</button>
+    </div>
+
+    <div class="row justify-content-center">
+        <button class="btn btn-warning col-2" onclick="restartGame()">Restart Game</button>
+    </div>
+</div>
+
+<script src="../../js/pong.js"></script>
+</body>
+</html>
