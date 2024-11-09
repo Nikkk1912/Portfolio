@@ -70,7 +70,6 @@ document.getElementById('moveDown').addEventListener('click', movePaddleDown);
 gameLoop();
 
 function restartGame() {
-    // Reset paddle and ball positions
     paddleY = canvas.height / 2 - 30;
     ballX = canvas.width / 2;
     ballY = canvas.height / 2;
