@@ -73,7 +73,6 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
-
 catButton.addEventListener('click', () => {
 
     isCatShowing = true;
@@ -82,7 +81,7 @@ catButton.addEventListener('click', () => {
     setTimeout(() => {
         isCatShowing = false;
         catGif.style.display = 'none';
-    }, 3000);
+    }, 4500);
 });
 
 document.getElementById('moveUp').addEventListener('click', movePaddleUp);
@@ -97,5 +96,5 @@ function restartGame() {
     ballSpeedX = 2;
     ballSpeedY = 2;
     isCatShowing = false;
-    catGif.style.display = 'none'; // Ensure cat GIF is hidden when restarting
+    catGif.style.display = 'none';
 }
